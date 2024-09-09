@@ -30,6 +30,16 @@ public class Task_2 {
                 j++;
             }
         }
+        for (int i = 0; i < n; i++) {
+            if (A[i] == 0) {
+                if (i != j) {
+                    int temp = A[i];
+                    System.arraycopy(A, j, A, j + 1, i - j);
+                    A[j] = temp;
+                }
+                j++;
+            }
+        }
 
         System.out.println("Перетворений масив:");
         for (int i = 0; i < n; i++) {
